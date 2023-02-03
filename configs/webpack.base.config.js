@@ -6,11 +6,11 @@ module.exports = {
     mode: 'development',
     entry: {
         base: {
-            import: './src/base/index.js',
+            import: path.resolve(__dirname, '../src/base/index.js'),
         }
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, '../dist/base'),
         clean: true
     },
     module: {},
