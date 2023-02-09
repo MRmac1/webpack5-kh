@@ -1,5 +1,5 @@
 import { createRoot } from 'react-dom/client'
-import CounterButton from './components/CounterButton/index.jsx'
+import CounterButton from './components/CounterButton'
 
 const root = createRoot(document.querySelector("#root"));
 

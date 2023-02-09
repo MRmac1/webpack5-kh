@@ -5,9 +5,12 @@ const path = require('path')
 module.exports = {
     mode: 'development',
     entry: {
-        base: {
+        app: {
             import: path.resolve(__dirname, '../src/react/index.jsx'),
         }
+    },
+    resolve: {
+        extensions: ['', '.js', '.jsx', '.scss', '.css']
     },
     output: {
         path: path.resolve(__dirname, '../dist/react'),
@@ -30,9 +33,11 @@ module.exports = {
             }
         ]
     },
+    devtool: "inline-source-map",
     devServer: {
         port: 8080,
-        open: true
+        open: true,
+        hot: true
     },
     plugins: [
         new webpack.DefinePlugin({
